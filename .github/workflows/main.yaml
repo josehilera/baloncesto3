@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'  
+jobs:
+  pruebas-unitarias:
+    runs-on: self-hosted
+    steps:
+      - name: unit tests
+        run: echo "pruebas-unitarias"
+
+  empaquetar:
+    runs-on: self-hosted
+    steps:
+      - name: build
+        run: echo "empaquetar"
+
+  pruebas-funcionales:
+    runs-on: self-hosted
+    steps:
+      - name: test
+        run: echo "pruebas-funcionales"
+  
+  calidad-codigo:
+    runs-on: self-hosted
+    steps:
+      - name: qa
+        run: echo "calidad-codigo"
+
+  despliegue-host-heroku:
+    runs-on: self-hosted
+    steps:
+      - name: deploy
+        run: echo "despliegue-host-heroku"
