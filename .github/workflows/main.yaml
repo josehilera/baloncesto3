@@ -17,7 +17,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: build
-        run: echo "empaquetar"
+        run: mvn package -DskipTests=true
 
   pruebas-funcionales:
     runs-on: self-hosted
